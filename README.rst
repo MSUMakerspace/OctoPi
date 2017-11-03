@@ -125,3 +125,27 @@ Usage
 #. The final image will be created at the ``src/workspace``
 
 Code contribution would be appreciated!
+
+MSU MAKERSPACE
+-------------------------------------------------------
+
+The university WPA2-Enterprise wifi was causing issues. To solve this, ssh into the pi and edit the file /etc/wpa_supplicant/wpa_supplicant.conf like so: 
+
+network={
+   ssid=""//#name of your network
+   proto=RSN
+   key_mgmt=WPA-EAP
+   group=CCMP TKIP
+   identity=""#username for Enterprise network
+   password=""#password for username (still working on hash value)
+   phase1="peaplabel=0"
+   phase2="auth=MSCHAPV2"
+}
+
+In addition, the files ~/.octoprint/config.yaml or ~/.octoprint/users.yaml may have values you would need to change. Specifically, if you would like to run setup of the creation of an online account, change the value of firstRun to true.
+
+Useful commands:
+sudo nano ~/.octoprint/config.yaml
+sudo nano ~/.octoprint/users.yaml
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
