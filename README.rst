@@ -129,7 +129,7 @@ Code contribution would be appreciated!
 MSU MAKERSPACE
 -------------------------------------------------------
 
-The university WPA2-Enterprise wifi was causing issues. To solve this, ssh into the pi and edit the file /etc/wpa_supplicant/wpa_supplicant.conf like so: 
+The university WPA2-Enterprise wifi was causing issues. To solve this, ssh into the pi and edit the file /etc/wpa_supplicant/wpa_supplicant.conf like so::
 
 network={
    ssid=""//#name of your network
@@ -144,7 +144,7 @@ network={
 
 In addition, the files ~/.octoprint/config.yaml or ~/.octoprint/users.yaml may have values you would need to change. Specifically, if you would like to run setup of the creation of an online account, change the value of firstRun to true.
 
-Useful commands:
+Useful commands::
 sudo nano ~/.octoprint/config.yaml
 sudo nano ~/.octoprint/users.yaml
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
